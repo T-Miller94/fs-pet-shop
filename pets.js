@@ -28,13 +28,13 @@ switch (process.argv[2]) {
         jsArr.push(newPet)
         let result = JSON.stringify(jsArr)
         fs.writeFile('pets.json', result, function(error) {
-        if(error) {
-            console.log(error)
-        } else {
-            if(process.argv[3] === undefined || process.argv[4] === undefined || process.argv[5] === undefined || process.argv.length > 6) {
-                console.log('Usage: node pets.js create AGE KIND NAME')
-            } 
-        }
+            if(error) {
+                console.log(error)
+            } else {
+                if(process.argv[3] === undefined || process.argv[4] === undefined || process.argv[5] === undefined || process.argv.length > 6) {
+                    console.log('Usage: node pets.js create AGE KIND NAME')
+                } 
+            }
         })
     }
     break
@@ -47,13 +47,13 @@ switch (process.argv[2]) {
         jsArr.splice(index, 1, newPet)
         let result = JSON.stringify(jsArr)
         fs.writeFile('pets.json', result, function(error) {
-        if(error) {
-            console.log(error)
-        } else {
-            if(process.argv[3] === undefined || process.argv[4] === undefined || process.argv[5] === undefined || process.argv[6] === undefined || process.argv.length > 7) {
-                console.log('Usage: node pets.js create INDEX AGE KIND NAME')
-            } 
-        }
+            if(error) {
+                console.log(error)
+            } else {
+                if(process.argv[3] === undefined || process.argv[4] === undefined || process.argv[5] === undefined || process.argv[6] === undefined || process.argv.length > 7) {
+                    console.log('Usage: node pets.js create INDEX AGE KIND NAME')
+                } 
+            }
         })
     }
     break
@@ -70,9 +70,10 @@ switch (process.argv[2]) {
         jsArr.splice(index, 1)
         let result = JSON.stringify(jsArr)
         fs.writeFile('pets.json', result, function(error) {
-        if(error) {
-            console.log(error)
-        }})
+            if(error) {
+                console.log(error)
+            }
+        })
     }
     break
 
